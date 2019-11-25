@@ -4,14 +4,14 @@ class EditDistance {
 
     public static int getEditDistance(String s, String t){
         int[][] dpTable = EditDistanceTable(s, t);
-        return dpTable[s.length()-1][t.length()-1];
+        return dpTable[s.length()][t.length()];
     }
 
     private static int[][] EditDistanceTable(String s, String t) {
-        int[][] dpTable = new int[s.length()][t.length()];
-        for (int i=0;i<s.length();i++){
+        int[][] dpTable = new int[s.length()+1][t.length()+1];
+        for (int i=0;i<=s.length();i++){
 
-            for (int j=0;j<t.length();j++){
+            for (int j=0;j<=t.length();j++){
 
                 if (i == 0){
                     dpTable[i][j] = j; // insert all of string2
@@ -40,7 +40,5 @@ class EditDistance {
         String t = scan.next();
 
         System.out.println(getEditDistance(s, t));
-        scan.close();
     }
-
 }
