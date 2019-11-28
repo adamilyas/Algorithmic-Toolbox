@@ -6,6 +6,8 @@ import java.util.Scanner;
  * stores values in results
  *  if value in results -> use the value in results
  *  else: put the value in results
+ * 
+ * Recall the definition of Fibonacci sequence: F_0 = 0, F_1 = 1, and F_i = F_i−1 + F_i−2 for i ≥ 2.
  */
 
 public class Fibonacci {

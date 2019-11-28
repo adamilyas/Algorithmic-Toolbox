@@ -2,6 +2,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * The goal in this problem is to find the minimum number of coins needed to change the input value 
+ * (an integer) into coins with denominations 1, 5, and 10.
+ */
 public class Change {
 
     private static int[] coins = {10, 5, 1};

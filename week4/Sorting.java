@@ -1,6 +1,9 @@
 import java.io.*;
 import java.util.*;
 
+/**
+ * i need to understand quicksort properly first
+ */
 public class Sorting {
     private static Random random = new Random();
 

@@ -1,5 +1,12 @@
 import java.util.*;
-
+/**
+ * Compare distance between 2 strings based on the number of
+ * - inserts
+ * - deletions
+ * - replacement
+ *  of characters. E.g. really -> bread : add [b], swap [l->d], delete [l,y].
+ *  ~ edit distance of 4 operation
+ */
 class EditDistance {
 
     public static int getEditDistance(String s, String t){

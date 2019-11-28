@@ -2,7 +2,12 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
-
+/**
+ * The goal of this code problem is to implement an algorithm for the fractional knapsack problem.
+ * 
+ * Example: A thief finds much more loot than his bag can fit. Help him to find the most valuable combination 
+ * of items assuming that any fraction of a loot item can be put into his bag.
+ */
 public class FractionalKnapsack {
     /**
      * 

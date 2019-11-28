@@ -1,5 +1,7 @@
 import java.util.*;
-
+/**
+ * GREATEST COMMON DIVISOR OF 2 INT: A AND B
+ */
 public class GCD {
 
   private static int gcd_naive(int a, int b) {

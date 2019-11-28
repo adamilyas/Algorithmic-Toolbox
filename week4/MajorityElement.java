@@ -1,6 +1,9 @@
 import java.util.*;
 import java.io.*;
 
+/**
+ * Suppose to use recursion but i just use a 1 parse + hashMap LOL
+ */
 public class MajorityElement {
     private static int getMajorityElement(int[] a, int left, int right) {
         if (left == right) {

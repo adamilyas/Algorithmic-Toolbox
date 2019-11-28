@@ -1,5 +1,8 @@
 import java.util.*;
 
+/**
+ * LOWEST COMMON MULTIPLE OF 2 INT: A AND B
+ */
 public class LCM {
 
   private static long lcm_naive(int a, int b) {

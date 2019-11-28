@@ -17,6 +17,11 @@ public class FibonacciLastDigit {
         return current % 10;
     }
     
+    /**
+     * Given an integer n, find the last digit of the nth Fibonacci number F_n (that is, F_n mod 10).
+     * Same as fibonacci except that you may want to store in F [i] not the ith Fibonacci number itself, 
+     * but just its last digit (thatis, F i mod 10).
+     */
     private static int getFibonacciLastDigit(int n) {
         if (n <= 1)
             return n;
