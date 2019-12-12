@@ -5,15 +5,51 @@ import java.io.*;
  * Suppose to use recursion but i just use a 1 parse + hashMap LOL
  */
 public class MajorityElement {
-    private static int getMajorityElement(int[] a, int left, int right) {
-        if (left == right) {
+
+    /**
+     * Init: first element to be candidate
+     * Init: count = 1
+     * 
+     * iterate starting from second element onwards:
+     *      if element == current candidate:
+     *          count ++
+     *      else: count --
+     * 
+     *      if count == 0:
+     *          replace current candidate with current element
+     * 
+     * if count == 0: no majority element
+     * else: find the count of the current candidate by iterating again.
+     */
+    private static int getMajorityElementUsingMooreVoting(int[] a) {
+        int candidate = a[0];
+        int netCount = 0;
+        for (int i : a){
+            if (i == candidate){
+                netCount++;
+            } else {
+                netCount--;
+            }
+
+            if (netCount == 0){
+                // set new candidate
+                candidate = i;
+                netCount = 1;
+            }
+        }
+
+        if (netCount < 1){
             return -1;
         }
-        if (left + 1 == right) {
-            return a[left];
+        // obtain candidate and check if count of candidate
+        int count = 0;
+        for (int i : a){
+            if (i == candidate){
+                count++;
+            }
         }
-        //write your code here
-        return -1;
+
+        return candidate;
     }
 
     private static int getMajorityElementUsingHashMap(int[] a) {
@@ -38,6 +74,8 @@ public class MajorityElement {
     }
 
     public static void main(String[] args) {
+
+        /**
         FastScanner scanner = new FastScanner(System.in);
         int n = scanner.nextInt();
         int[] a = new int[n];
@@ -49,6 +87,13 @@ public class MajorityElement {
         } else {
             System.out.println(0);
         }
+         */
+
+        int[] a = {2, 2, 3, 5, 2, 2, 6};
+        System.out.println(getMajorityElementUsingHashMap(a));
+        System.out.println(getMajorityElementUsingMooreVoting(a));
+
+
     }
     static class FastScanner {
         BufferedReader br;
