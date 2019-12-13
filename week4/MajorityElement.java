@@ -49,7 +49,11 @@ public class MajorityElement {
             }
         }
 
-        return candidate;
+        if (count > a.length/2){
+            return candidate;
+        } else {
+            return -1;
+        }
     }
 
     private static int getMajorityElementUsingHashMap(int[] a) {
