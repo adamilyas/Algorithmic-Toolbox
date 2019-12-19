@@ -24,7 +24,7 @@ public class Fibonacci {
 }
 ```
 
-## BinarySearch with Recursion
+## BinarySearch testing
 ```
     static int binarySearch(int[] a, int x) {
         int left = 0, right = a.length-1;
